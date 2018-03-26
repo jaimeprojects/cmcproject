@@ -161,7 +161,7 @@ public class SearchController{
 //          printr[somethingCounter][1] = results[x][1];
 //          somethingCounter++;
           schoolInfo.add(results[x][0]);
-          if(schoolInfo.size() == 5)
+          if(schoolInfo.size() == 10)
             return schoolInfo;
         } 
       }

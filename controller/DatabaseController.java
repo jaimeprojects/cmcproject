@@ -237,6 +237,33 @@ public class DatabaseController{
 	  }
 	  return majors;
   }
+  
+  public ArrayList<String> getReccomendedSchools(University u){
+	  int numberOfStudentsMax , numberOfStudentsMIN;
+	  double percFemMAX, percFemMIN;
+	  double satMathMAX, satMathMIN;
+	  double satVerbMAX, satVerb;
+	  double expensesMax, expensesMin;
+	  double financialAidMax, financialAidMin;
+	  int numApplicantMax, numApplicantMin;
+	  double percAdmitMax, percAdmitMin;
+	  double percEnrollMax, percEnrollMin;
+	  int acadScaleMax, acadScaleMin;
+	  int lifeScaleMax, lifeScaleMin;
+	  
+	  String[][] universities = dblib.university_getUniversities();
+	  String[][] emphasis = dblib.university_getEmphases();
+	  
+	  for(int i = 0; i < universities.length; i++) {
+		  for(int j = 0; j< universities[i].length; j++){
+			  if(true) {
+				  numberOfStudentsMax = 0;
+		  }
+		  }
+	  }
+	  
+	  return null;
+  }
   }
   
 
