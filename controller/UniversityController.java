@@ -120,10 +120,7 @@ public class UniversityController{
     System.out.println("University AcademicScale: " + u.getAcademicScale());
     System.out.println("University SocialScale: " + u.getSocialScale());
     System.out.println("University QualityOfLife: " + u.getQualityOfLife());
-    for(int i =0; i< m.size();i++) {
-    	System.out.println("University Emphases: " + m.get(1));	
-    }
-    
+    System.out.println("University Emphases: " + m);
     
   }
  /**

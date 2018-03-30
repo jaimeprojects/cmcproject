@@ -11,6 +11,7 @@ public class CMCDriver {
 	
 	//Alternative Scenario: Bad Password
 	StudentInteraction john = new StudentInteraction("juser", "12345");
+	//System.out.println("its logged in");
 	john.login("juser", "1234");
 	
 	//Alternative Scenario: Use is inactive
@@ -27,7 +28,6 @@ public class CMCDriver {
     System.out.println("Search citeria user enters.");
     System.out.println("Top 5 schools matching search:");
     john.search("AUBURN", "ALABAMA", "SMALL-CITY", "STATE", "35000", "21", "480", "545", "12468", "50", "5500", "90", "60", "2", "4", "4");
-    //john.search("OF",       "MINNESOTA" ,"-1", "-1", "-1",      "-1",  "-1", "-1", "-1",    "-1",   "-1",  "-1",  "-1", "-1", "-1", "-1", "-1");
     System.out.println("");
    // University bard = new University();
     
@@ -38,14 +38,15 @@ public class CMCDriver {
     System.out.println("");
     
     //View saved universities
-    System.out.println("Student Views Their saved Universities");
-    //john.saveUniversity("juser","BARNARD");
-    //john.saveUniversity("juser","BARD");
+    john.saveUniversity("juser","BARNARD");
+    
     john.viewSavedUniversities("juser");
     
-    john.removeUniversity("juser", "BARD");
-    john.viewSavedUniversities("juser");
+    john.removeUniversity("John", "BARD");
+    
+    //john.viewSavedUniversities();
     System.out.println("");
+    //john.viewUniversityDetails(University university);
     
     //john.confirmation();
     
@@ -61,11 +62,9 @@ public class CMCDriver {
     noreen.login("noreen", "admin");
     noreen.addStudent("John", "User", "juser", "password", 'a', 'Y');
     System.out.println("");
-    
-    //admin views all schools
+  //admin views all schools
     System.out.println("Admin views all the schools");
-    //noreen.viewUniversites();
-    
+    noreen.viewUniversites();
     //admin edits a user's information
     System.out.println("Edits John User's information \n");
     noreen.editStudent("juser", "Jon", "Uzer", "password", 'a', 'Y');
@@ -75,7 +74,6 @@ public class CMCDriver {
     System.out.println("School citeria admin enters.");
     noreen.addUniversity("BARD","Ohio","Small-city", "Private", 10000, 0.0,0.0,0.0, 32239.0,4000.0,0,0.0,0.0,0,0,0);
     noreen.addUniversity("CSB","MN","Small-city", "Private", 10000, 0.0,0.0,0.0, 32239.0,4000.0,0,0.0,0.0,0,2,0);
-    //noreen.viewUniversites();
     System.out.println("");
     
     //admin edits a school-Ramon
@@ -86,6 +84,7 @@ public class CMCDriver {
     System.out.println("Admin creates a new active user");
     noreen.addStudent( "Adam", "West", "Batman", "password", 'a', 'Y');
     System.out.println("");
+    
     
     
     //admin views all users(students?)-Jaime
@@ -108,8 +107,9 @@ public class CMCDriver {
     //admin logout-?
     System.out.println("Admin has been logged out");
     noreen.logout();
-    StudentInteraction adam = new StudentInteraction("Batman", "Adam");
-	adam.login("Batman", "Adam");
+  
 
+  
+  
   }
 }
